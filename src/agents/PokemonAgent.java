@@ -24,7 +24,6 @@ public class PokemonAgent extends Agent {
             type = (PokemonType) args[1];
         }
 
-        // Inicializar posición aleatoria en el mapa
         x = rand.nextInt(30);
         y = rand.nextInt(30);
         gui.updatePosition(pokemonName, x, y, type.getColor());
@@ -32,11 +31,9 @@ public class PokemonAgent extends Agent {
 
         addBehaviour(new TickerBehaviour(this, 1000) {
             protected void onTick() {
-                // Moverse aleatoriamente en el mapa
                 moveRandomly(gui);
                 gui.updatePosition(pokemonName, x, y, type.getColor());
 
-                // Buscar y pelear con oponentes cercanos
                 findAndBattleOpponent();
             }
         });
@@ -46,8 +43,7 @@ public class PokemonAgent extends Agent {
         int p_x = x;
         int p_y = y;
 
-        // Cambiar posición x e y de manera aleatoria dentro de los límites del mapa
-        x = (x + rand.nextInt(3) - 1 + 30) % 30; // Mover entre -10 y 10
+        x = (x + rand.nextInt(3) - 1 + 30) % 30; 
         y = (y + rand.nextInt(3) - 1 + 30) % 30;
 
         if (x == 0 || x > gui.getWidth()) x = p_x;
@@ -85,11 +81,15 @@ public class PokemonAgent extends Agent {
         }
 
         opponent.health -= damage;
+        System.out.println("***********************************");
         System.out.println(this.pokemonName + " ha causado " + damage + " de daño a " + opponent.pokemonName + ". Salud restante: " + opponent.health);
+        System.out.println("***********************************");
 
         if (opponent.health <= 0) {
+            System.out.println("-------------------------------");
             System.out.println(opponent.pokemonName + " ha sido derrotado!");
-            opponent.doDelete(); // Eliminar agente si la salud es 0 o menos
+            opponent.doDelete(); 
+            System.out.println("-------------------------------");
         }
     }
 

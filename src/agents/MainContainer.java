@@ -13,7 +13,6 @@ public class MainContainer {
     public static void main(String[] args) {
         PokemonGUI gui = new PokemonGUI();
         PokemonAgent.setGui(gui);
-        // Configurar y arrancar el main container
         jade.core.Runtime rt = jade.core.Runtime.instance();
         Profile profile = new ProfileImpl();
         profile.setParameter(Profile.MAIN_HOST, "localhost");
@@ -21,7 +20,6 @@ public class MainContainer {
         AgentContainer mainContainer = rt.createMainContainer(profile);
 
         try {
-            // Crear y arrancar los agentes Pokémon
             Object[][] pokemonData = {
                     {"Bulbasaur", PokemonType.GRASS},
                     {"Ivysaur", PokemonType.GRASS},

@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class PokemonGUI extends JFrame {
-    private final int SIZE = 30; // tamaño del mapa 30x30
-    private final int SCALE = 20; // escala para visualización
+    private final int SIZE = 30; 
+    private final int SCALE = 20; 
     private ConcurrentHashMap<String, ColoredPoint> positions = new ConcurrentHashMap<>();
     private List<PokemonAgent> agents = new ArrayList<>();
 
@@ -18,7 +18,7 @@ public class PokemonGUI extends JFrame {
         setTitle("Pokemon Arena");
         setSize(SIZE * SCALE + 50, SIZE * SCALE + 50);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null); // centra la ventana
+        setLocationRelativeTo(null); 
         positions = new ConcurrentHashMap<>();
         setVisible(true);
     }
@@ -33,7 +33,7 @@ public class PokemonGUI extends JFrame {
         repaint();
     }
     public void addAgent(PokemonAgent agent) {
-        agents.add(agent); // Add this line to add agents to the list
+        agents.add(agent);
     }
 
     public PokemonAgent findNearbyAgent(PokemonAgent currentAgent) {
