@@ -95,4 +95,4 @@ Los agentes tendrán un color en específico que será según su poder y se most
 - El código actual puede aguantar cantidades más altas de pokemones en la simulación, pero se limita hasta 18 agentes para que las acciones realizadas cada turno sea comprensible
 
 ## VIDEO-EXPOSICIÓN
-Enlace al video en YouTube: ![link](https://youtu.be/bC21HgwcYoI)
+Enlace al video en YouTube: [link](https://youtu.be/bC21HgwcYoI)
