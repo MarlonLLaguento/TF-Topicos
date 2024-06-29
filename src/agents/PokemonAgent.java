@@ -8,7 +8,7 @@ import java.util.Random;
 public class PokemonAgent extends Agent {
     private String pokemonName;
     private int health = 100;
-    private int x, y; // Posiciones en el mapa
+    private int x, y; 
     private Random rand = new Random();
     private static PokemonGUI gui;
     private PokemonType type;
@@ -27,7 +27,7 @@ public class PokemonAgent extends Agent {
         x = rand.nextInt(30);
         y = rand.nextInt(30);
         gui.updatePosition(pokemonName, x, y, type.getColor());
-        gui.addAgent(this); // Register agent with the GUI
+        gui.addAgent(this); 
 
         addBehaviour(new TickerBehaviour(this, 1000) {
             protected void onTick() {
