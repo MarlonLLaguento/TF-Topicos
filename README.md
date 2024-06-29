@@ -1,3 +1,4 @@
+![alt text](https://github.com/MarlonLLaguento/TF-Topicos/blob/main/images/logo_upc.png)
 # UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS
 
 ## TÓPICOS EN CIENCIAS DE LA COMPUTACIÓN - CC58
@@ -63,3 +64,30 @@ Se utilizó el IDE IntelliJ IDEA debido a su eficacia a la hora de manejar proye
 - Por cada turno, los pokemons deben realizar al menos una acción, la cual involucra moverse y/o atacar a otro pokémon cercano a sí mismo.
 - En el caso de batalla, debe haber un incremento o decremento al daño de cada pokémon según si el tipo de su oponente es uno que él es fuerte o débil contra.
 - Cuando la vida de un pokémon llega a 0, son eliminados de la simulación.
+
+## DESARROLLO
+Primero, se crearon tres clases para hacer un mejor manejo de la implementación y estas son: MainContainer, PokemosAgente y PokemonGUI. La primera, permite inicializar los agentes. La segunda, en donde se encuentran las características de los agentes, la interacción entre estos y su sistema de batalla. La tercera, nos permite implementar la interfaz gráfica con los datos de los agentes. 
+![alt text](https://github.com/MarlonLLaguento/TF-Topicos/blob/main/images/Captura1.png)
+
+PokemonAgente, contiene los atributos de cada agente, como lo es el poder de cada pokemon que servirá para el sistema de batalla.
+![alt text](https://github.com/MarlonLLaguento/TF-Topicos/blob/main/images/Captura2.png)
+![alt text](https://github.com/MarlonLLaguento/TF-Topicos/blob/main/images/Captura3.png)
+
+Los agentes, reportaron cuando encuentren un oponente y comenzará su batalla donde se causarán daño mutuamente.
+![alt text](https://github.com/MarlonLLaguento/TF-Topicos/blob/main/images/Captura4.png)
+
+La cantidad de daño dependerá si es que se enfrenta dos pokemons de igual o diferente elemento. Además, los agentes que tengan 0 de salud serán eliminados de la interfaz. Es así, la clase agente cuenta con todas esas características que la vuelven muy completa y manejable para futuros cambios.
+![alt text](https://github.com/MarlonLLaguento/TF-Topicos/blob/main/images/Captura5.png)
+
+Por otro lado, en PokemonGUI, captamos las características de cada pokémon como su atributo y su posición.
+![alt text](https://github.com/MarlonLLaguento/TF-Topicos/blob/main/images/Captura6.png)
+
+Los agentes tendrán un color en específico que será según su poder y se mostrarán en la interfaz gráfica según su posición actual X e Y. 
+
+## CONCLUSIONES
+- A comparación de código creado únicamente con Python, Java ofrece alternativas más flexibles para la simulación utilizando un GUI y agentes.
+- El código actual puede con facilidad ingresar más tipos de pokemon junto con sus fuerzas y debilidades, con tal que se cree su agente manualmente por el contenedor main.
+- El código actual puede aguantar cantidades más altas de pokemones en la simulación, pero se limita hasta 18 agentes para que las acciones realizadas cada turno sea comprensible
+
+## VIDEO-EXPOSICIÓN
+Enlace al video en YouTube: 
